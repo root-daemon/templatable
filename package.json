@@ -1,0 +1,28 @@
+{
+  "name": "templatable",
+  "version": "0.1.0",
+  "description": "A CLI tool for initializing projects from templates",
+  "type": "module",
+  "main": "./src/index.ts",
+  "module": "./src/index.ts",
+  "bin": {
+    "templatable": "./src/index.ts"
+  },
+  "scripts": {
+    "start": "bun run src/index.ts",
+    "build": "bun build ./src/index.ts --outdir ./dist --target node",
+    "dev": "bun run start",
+    "link": "bun link"
+  },
+  "devDependencies": {
+    "@types/bun": "latest",
+    "@types/inquirer": "^9.0.7",
+    "@types/node": "^22.13.9"
+  },
+  "peerDependencies": {
+    "typescript": "^5.0.0"
+  },
+  "dependencies": {
+    "inquirer": "^12.4.2"
+  }
+}
