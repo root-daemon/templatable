@@ -1,19 +1,39 @@
 {
-  "name": "templatable",
+  "name": "@root-daemon/templatable",
   "version": "0.1.0",
   "description": "A CLI tool for initializing projects from templates",
   "type": "module",
-  "main": "./src/index.ts",
-  "module": "./src/index.ts",
+  "main": "./dist/index.js",
   "bin": {
-    "templatable": "./src/index.ts"
+    "templatable": "./dist/index.js"
   },
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "start": "bun run src/index.ts",
     "build": "bun build ./src/index.ts --outdir ./dist --target node",
+    "prepublishOnly": "bun run build",
     "dev": "bun run start",
     "link": "bun link"
   },
+  "keywords": [
+    "cli",
+    "template",
+    "project-generator",
+    "scaffolding",
+    "bun"
+  ],
+  "author": "root-daemon <srivishal.sivasubramanian@gmail.com>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/root-daemon/templatable.git"
+  },
+  "bugs": {
+    "url": "https://github.com/root-daemon/templatable/issues"
+  },
+  "homepage": "https://github.com/root-daemon/templatable#readme",
   "devDependencies": {
     "@types/bun": "latest",
     "@types/inquirer": "^9.0.7",

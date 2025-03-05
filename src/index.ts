@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 
-import { initCommand } from "./commands/initCommand";
+import { initCommand } from "./commands/initCommand.js";
 
 const args = process.argv.slice(2);
 const command = args[0];
@@ -57,7 +57,6 @@ Examples:
 }
 
 async function showVersion() {
-
   const packageJson = await import("../package.json", {
     assert: { type: "json" },
   });
